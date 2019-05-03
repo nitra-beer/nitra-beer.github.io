@@ -1,20 +1,163 @@
 ---
 title: Nitra Beer
+short_description: Stretnutie IT ľudí mesta Nitra pri pifku
 description: Stretnutie  programátorov, dizajnérov, software-developer, sys-adminov, dev-opsákov, študentov IT, a iných IT entuziastov na Pivku v Nitre
-
+next_meetup: Najblyžšie stretnutie
+next_meetup_date: 2019-00-01 18:00
+next_meetup_pub_name: The Irish Times Pub
+next_meetup_location: 'Kupecká 1356/14, 949 01 Nitra, Slovakia'
 ---
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Beer_mug.svg/1024px-Beer_mug.svg.png" alt="Beer!" width="500" height="500"/>
-
-
-<h1>
-  Nitra Beer
-</h1>
-
-<p class="description"><%= current_page.data.description %></p>
-
-Výtaní je každý kto aspoň raz pomyslel sa toto: <img src="https://c1.staticflickr.com/9/8465/8385454193_aa204dec75_b.jpg">
 
 
 
-<a href="https://nitrabeer.slack.com/">Slack</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Nitra.beer</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#next-meetup"><%= current_page.data.next_meetup %></a>
+          </li>
+          <%#<li class="nav-item">%>
+            <%#<a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>%>
+          <%#</li>%>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead">
+    <!-- Photo by Quentin Dr on Unsplash -->
+
+    <div class="container h-100">
+      <div class="row h-100 align-items-center justify-content-center text-center">
+        <div class="col-lg-10 align-self-end">
+          <h1 class="text-uppercase text-white font-weight-bold"><%= current_page.data.title %></h1>
+          <hr class="divider my-4">
+        </div>
+        <div class="col-lg-8 align-self-baseline">
+
+          <p class="text-white-75 font-weight-light mb-5"><%= current_page.data.short_description %></p>
+          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#next-meetup"><%= current_page.data.next_meetup %><br><em><%= current_page.data.next_meetup_date %></em></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-section bg-primary" id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="text-white mt-0">Čo je Nitra.beer ?</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4"><%= current_page.data.description %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="next-meetup">
+    <div class="container">
+      <h2 class="text-center mt-0"><%= current_page.data.next_meetup %></h2>
+      <hr class="divider my-4">
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-gem text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Kedy ?</h3>
+            <p class="text-muted mb-0"><%= current_page.data.next_meetup_date %></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-laptop-code text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Kde ?</h3>
+            <p class="text-muted mb-0"><%= current_page.data.next_meetup_pub_name %></p>
+            <p class="text-muted mb-0"><%= current_page.data.next_meetup_location %></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 text-center">
+          <div class="mt-5">
+            <i class="fas fa-4x fa-globe text-primary mb-4"></i>
+            <h3 class="h4 mb-2">Ako Vás spoznám ?</h3>
+            <p class="text-muted mb-0">Budeme mať na stole papier s nápisom <em>"Nitra&nbsp;beer"</em></p>
+            <p class="text-muted mb-0">Hladáš tlupu IŤakov, to sa nedá prehliadnúť :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="page-section bg-dark text-white">
+    <div class="container text-center">
+      <h2 class="mb-4">slack channel</h2>
+      <p class="">Máš otázky ? Nájdeš nás na Slacku</p>
+
+      <a class="btn btn-light btn-xl" href="https://nitrabeer.slack.com/"><img src="/images/slack-logo-icon.png" width="40" height="40" alt="" /> nitrabeer.slack.com</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="mt-0">Kontakt</h2>
+          <hr class="divider my-4">
+          <p class="text-muted mb-5"></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 ml-auto text-center">
+          <div><a href="https://nitrabeer.slack.com/">Slack: nitrabeer</a></div>
+        </div>
+        <div class="col-lg-4 mr-auto text-center">
+          <a class="d-block" href="equivalent@eq8.eu">equivalent@eq8.eu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%#[> Bootstrap core JavaScript <]%>
+  <%#<script src="vendor/jquery/jquery.min.js"></script>%>
+  <%#<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>%>
+
+  <%#[> Plugin JavaScript <]%>
+  <%#<script src="vendor/jquery-easing/jquery.easing.min.js"></script>%>
+  <%#<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>%>
+
+  <%#[> Custom scripts for this template <]%>
+  <%#<script src="js/creative.min.js"></script>%>
+
+
+
+
+
+
+
+
+
+
+<%#<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Beer_mug.svg/1024px-Beer_mug.svg.png" alt="Beer!" width="500" height="500"/>%>
+
+
+
+<%#Výtaní je každý kto aspoň raz pomyslel sa toto: <img src="https://c1.staticflickr.com/9/8465/8385454193_aa204dec75_b.jpg">%>
+
+
+
