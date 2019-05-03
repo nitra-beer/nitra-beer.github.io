@@ -1,4 +1,4 @@
-# nitra-beer.github.io
+# nitra.beer
 Meetup of IT enthusiasts in Nitra Slovakia
 
 
